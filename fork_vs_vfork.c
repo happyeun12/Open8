@@ -59,7 +59,7 @@ int main(int argc, char **argv)
 			printf("Elased Time for vfork() with %luGB data: %lu ns\n", data_size_GB, get_timediff(&start_time, &end_time));
 			//printf("I'm parent pid=%d\n", getpid());
 		}
-	} else { // fork
+	} else { 
 		pid = fork();
 		if (pid < 0) {
 			printf("failed to create a new process\n");
