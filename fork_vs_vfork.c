@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 		if (pid < 0) {
 			printf("failed to create a new process\n");
 		} else if (pid == 0) {
-			//printf("I'm child pid=%d\n", getpid());
+			
 			exit(0);
 		} else if (pid > 0) { 
 			clock_gettime(CLOCK_MONOTONIC, &end_time);
