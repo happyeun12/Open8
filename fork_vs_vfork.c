@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 		} else if (pid == 0) {
 			//printf("I'm child pid=%d\n", getpid());
 			exit(0);
-		} else if (pid > 0) { // after the child terminates
+		} else if (pid > 0) { 
 			clock_gettime(CLOCK_MONOTONIC, &end_time);
 			printf("Elased Time for vfork() with %luGB data: %lu ns\n", data_size_GB, get_timediff(&start_time, &end_time));
 		
