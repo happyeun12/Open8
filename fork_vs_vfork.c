@@ -14,7 +14,7 @@ inline long get_timediff(struct timespec *start, struct timespec *end)
 			+ ((end->tv_sec - start->tv_sec) * 1E9);
 }
 
-
+// This is testing
 int main(int argc, char **argv)
 {
 	pid_t pid;
@@ -64,7 +64,7 @@ int main(int argc, char **argv)
 		if (pid < 0) {
 			printf("failed to create a new process\n");
 		} else if (pid == 0) {
-			//printf("I'm child pid=%d\n", getpid());
+			
 		} else if (pid > 0) {
 			clock_gettime(CLOCK_MONOTONIC, &end_time);
 			printf("Elased Time for fork() with %luGB data: %lu ns\n", data_size_GB, get_timediff(&start_time, &end_time));
